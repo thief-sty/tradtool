@@ -29,6 +29,142 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "330a5ed07fa54e4702c9d6c4174f74427fc0ef6e214bbd677ae50a5099946470"
 
 [[package]]
+name = "arborium"
+version = "2.18.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "abb7a99c146e42da48d5783335814d9bd0f088143aa51fb5ea5b59855df5ca70"
+dependencies = [
+ "arborium-highlight",
+ "arborium-theme",
+ "arborium-tree-sitter",
+ "dlmalloc",
+]
+
+[[package]]
+name = "arborium-css"
+version = "2.18.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "040085bd355e439915eaeca9ed9db316a8dc3795f36c23948f216a808192376f"
+dependencies = [
+ "arborium-sysroot",
+ "cc",
+ "tree-sitter-language",
+]
+
+[[package]]
+name = "arborium-highlight"
+version = "2.18.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "65635c663883cb887d52abce06650f81e4abeb7bfd8e79a555f6a0d8e8f0a31b"
+dependencies = [
+ "arborium-theme",
+ "arborium-tree-sitter",
+ "streaming-iterator",
+]
+
+[[package]]
+name = "arborium-html"
+version = "2.18.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0b109985d29a842c1fe328b567ac48f8d2211bce778dfe12da6297dd58adac2a"
+dependencies = [
+ "arborium-css",
+ "arborium-javascript",
+ "arborium-sysroot",
+ "cc",
+ "tree-sitter-language",
+]
+
+[[package]]
+name = "arborium-javascript"
+version = "2.18.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "424c648bf3075e137a5620318a7f865cf320c5f43163d3094764d4cc050e7cc0"
+dependencies = [
+ "arborium-jsdoc",
+ "arborium-sysroot",
+ "cc",
+ "tree-sitter-language",
+]
+
+[[package]]
+name = "arborium-jsdoc"
+version = "2.18.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f06a77e65f79ded95575bbc9b48a3f213e82ba1a23e5bc64ee5df77f14166cf4"
+dependencies = [
+ "arborium-sysroot",
+ "cc",
+ "tree-sitter-language",
+]
+
+[[package]]
+name = "arborium-markdown"
+version = "2.18.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5bd7c263aeb25a87a0b9eb0d90d2f559eb4e7ec4bce2a305271893902201a6e1"
+dependencies = [
+ "arborium-html",
+ "arborium-sysroot",
+ "arborium-toml",
+ "arborium-yaml",
+ "cc",
+ "tree-sitter-language",
+]
+
+[[package]]
+name = "arborium-sysroot"
+version = "2.18.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "59d99d80550b726f9dec7ee6d07118c31e08b10e729ac488eabd4c10603dc841"
+dependencies = [
+ "cc",
+ "dlmalloc",
+]
+
+[[package]]
+name = "arborium-theme"
+version = "2.18.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a00a8f02b994f454d9703dd6a8b6075ba778320550d699198faff1882594c0f7"
+
+[[package]]
+name = "arborium-toml"
+version = "2.18.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "102a80466c8afd64c0c05c57cae30e5ff5ddbf3f943065fdd8fbe64331b49952"
+dependencies = [
+ "arborium-sysroot",
+ "cc",
+ "tree-sitter-language",
+]
+
+[[package]]
+name = "arborium-tree-sitter"
+version = "2.18.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b27f3bd6bb7192e4a19dc177748532b305e9052839b34e55705f53e5eea2d5ca"
+dependencies = [
+ "arborium-sysroot",
+ "cc",
+ "regex",
+ "regex-syntax",
+ "streaming-iterator",
+ "tree-sitter-language",
+]
+
+[[package]]
+name = "arborium-yaml"
+version = "2.18.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d83a224e870912490905c2cb21fa1d0b055ae9f88a47329f5849662cb9fe656f"
+dependencies = [
+ "arborium-sysroot",
+ "cc",
+ "tree-sitter-language",
+]
+
+[[package]]
 name = "async-lock"
 version = "3.4.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -124,6 +260,16 @@ name = "camino"
 version = "1.2.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5f2d30e4173c4026932d51d31d6b0613b1fd3014bf3f9f8943d4ba139c437ba0"
+
+[[package]]
+name = "cc"
+version = "1.4.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5add81bb678e6cb321aff7fa0dc7689ad82b112dbc032cea19f91d6b8e3582b9"
+dependencies = [
+ "find-msvc-tools",
+ "shlex",
+]
 
 [[package]]
 name = "cfg-if"
@@ -288,6 +434,17 @@ dependencies = [
 ]
 
 [[package]]
+name = "dlmalloc"
+version = "0.2.14"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ad5208a115eaba24916f7456929832e310a81518c641f93fee4f89aa93aa3675"
+dependencies = [
+ "cfg-if",
+ "libc",
+ "windows-sys",
+]
+
+[[package]]
 name = "drain_filter_polyfill"
 version = "0.1.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -341,6 +498,12 @@ dependencies = [
  "event-listener",
  "pin-project-lite",
 ]
+
+[[package]]
+name = "find-msvc-tools"
+version = "0.1.9"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5baebc0774151f905a1a2cc41989300b1e6fbb29aff0ceffa1064fdd3088d582"
 
 [[package]]
 name = "form_urlencoded"
@@ -481,6 +644,18 @@ dependencies = [
  "wasm-bindgen",
  "wasm-bindgen-futures",
  "web-sys",
+]
+
+[[package]]
+name = "gloo-timers"
+version = "0.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "bbb143cf96099802033e0d4f4963b19fd2e0b728bcf076cd9cf7f6634f092994"
+dependencies = [
+ "futures-channel",
+ "futures-core",
+ "js-sys",
+ "wasm-bindgen",
 ]
 
 [[package]]
@@ -683,6 +858,59 @@ dependencies = [
 ]
 
 [[package]]
+name = "kode-core"
+version = "0.5.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "949500ec9eb6ab618ea419a86e2208df0aac25c94e250a387fc5e27de8a2bff9"
+dependencies = [
+ "ropey",
+]
+
+[[package]]
+name = "kode-doc"
+version = "0.5.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "227c59906d03d9949e4ae2bb2cd116a81b42e8ee30f78b5e63e959d113139d1c"
+dependencies = [
+ "arborium-markdown",
+ "arborium-tree-sitter",
+ "smallvec",
+]
+
+[[package]]
+name = "kode-leptos"
+version = "0.5.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "398b2e3205db01c92f14ff14b1e4244cd89a5322156491e3adb14bc82e8f1f76"
+dependencies = [
+ "arborium",
+ "arborium-theme",
+ "arborium-tree-sitter",
+ "gloo-timers",
+ "js-sys",
+ "kode-core",
+ "kode-doc",
+ "kode-markdown",
+ "leptos",
+ "log",
+ "send_wrapper",
+ "wasm-bindgen",
+ "wasm-bindgen-futures",
+ "web-sys",
+]
+
+[[package]]
+name = "kode-markdown"
+version = "0.5.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8ce3d5d9c65a4190444fdb3456c5a68a8aadad7c9c5a3edf0a160b89b3bb3224"
+dependencies = [
+ "arborium-markdown",
+ "arborium-tree-sitter",
+ "kode-core",
+]
+
+[[package]]
 name = "konst"
 version = "0.2.20"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -838,6 +1066,12 @@ name = "litemap"
 version = "0.8.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "92daf443525c4cce67b150400bc2316076100ce0b3686209eb8cf3c31612e6f0"
+
+[[package]]
+name = "log"
+version = "0.4.33"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0ceec5bc11778974d1bcb055b18002eba7f4b3518b6a0081b3af5f21666da9ad"
 
 [[package]]
 name = "manyhow"
@@ -1141,6 +1375,16 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d6f6ff9a378485b298a5286656da665ba74413d36db0979633275d2e708145d4"
 
 [[package]]
+name = "ropey"
+version = "1.6.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "93411e420bcd1a75ddd1dc3caf18c23155eda2c090631a85af21ba19e97093b5"
+dependencies = [
+ "smallvec",
+ "str_indices",
+]
+
+[[package]]
 name = "rstml"
 version = "0.12.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1333,6 +1577,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "shlex"
+version = "2.0.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f8fadd59c855ef2080decdef8ff161eb6661b86933c9d82e5ba29dc602a55aba"
+
+[[package]]
 name = "slab"
 version = "0.4.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1358,6 +1608,18 @@ name = "stable_deref_trait"
 version = "1.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6ce2be8dc25455e1f91df71bfa12ad37d7af1092ae736f3a6cd0e37bc7810596"
+
+[[package]]
+name = "str_indices"
+version = "0.4.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d08889ec5408683408db66ad89e0e1f93dff55c73a4ccc71c427d5b277ee47e6"
+
+[[package]]
+name = "streaming-iterator"
+version = "0.1.9"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2b2231b7c3057d5e4ad0156fb3dc807d900806020c5ffa3ee6ff2c8c76fb8520"
 
 [[package]]
 name = "syn"
@@ -1530,8 +1792,15 @@ dependencies = [
 name = "tradtool"
 version = "0.1.0"
 dependencies = [
+ "kode-leptos",
  "leptos",
 ]
+
+[[package]]
+name = "tree-sitter-language"
+version = "0.1.7"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "009994f150cc0cd50ff54917d5bc8bffe8cad10ca10d81c34da2ec421ae61782"
 
 [[package]]
 name = "typed-builder"
